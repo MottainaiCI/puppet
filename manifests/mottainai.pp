@@ -1,3 +1,10 @@
+# The mottainai::agent resource handles the mottainai-agent configuration
+# and ensure the service and the package is installed.
+#
+# @param application_url Application url
+# @param agent_key Agent key generated from the mottanai cli/web interface.
+# @param broker, amqp broker uri
+
 define mottainai::agent (
   String $application_url,
   String $agent_key,
