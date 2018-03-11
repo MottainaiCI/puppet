@@ -1,0 +1,27 @@
+<%- | String $application_url,
+      String $agent_key,
+      String $default_queue,
+      String $exchange_queue,
+      String $result_backend,
+      String $broker,
+      String $build_path,
+      String $work_dir,
+      Integer $agent_concurrency
+| -%>
+
+# WebUI
+application_url: '<%= $application_url %>'
+agent_key: '<%= $agent_key %>'
+
+# AMQP
+results_expire_in: 3600
+amqp_default_queue: "<%= $default_queue %>"
+amqp_exchange: "<%= $exchange_queue %>"
+amqp_result_backend: '<%= $result_backend %>'
+amqp_broker: '<%= $broker %>'
+
+# Misc
+build_path: '<%= $build_path %>'
+work_dir: '<%= $work_dir %>'
+agent_concurrency: <%= $agent_concurrency %> # Number of parallel builds
+
